@@ -1,0 +1,15 @@
+{% load static %}
+
+<div class="row">
+
+    {% for brand in brands %}
+  <div class="col-md-4">
+                        <div class="service_item">
+                            <img class="img-fluid" src="{% static 'images/'|add:brand.imageUrl%}" width="300" height="250" alt="Our Services">
+
+                            <a href="{%url 'markalar-details' brand.slug%}" class="btn know_btn">Daha Fazlası</a>
+                        </div>
+                    </div>
+{% endfor %}
+
+                </div>
